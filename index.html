@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kneo Platform</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      let endpoints = window.location.href.split('/platformUI')[0]
+      // let {origin} = new URL(window.location.href);
+      let origin = 'https://development.mesplatform.com';
+      window.env = {
+        AUTH_BASE_URL: `${origin}/auth`,
+        BALLOONING_BASE_URL: `${origin}/balloon`,
+        BALLOONING_PY_BASE_URL: `${origin}/ballooningpy`,
+        CONFIG_BASE_URL: `${origin}/config`,
+        INSPECTION_BASE_URL: `${origin}/inspection`,
+        SPC_BASE_URL: `${origin}/spc`
+      }
+    </script>
+  </body>
+</html>
